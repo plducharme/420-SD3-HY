@@ -28,3 +28,8 @@ Exercices
    
       self.setCentralWidget(main_container)
    3) Ajouter la logique dans la méthode pour afficher une équation au hasard
+
+Documentation officielle PySide6: https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/
+
+
+
