@@ -7,7 +7,7 @@ Exercices
    3) qui possède un Button qui ferme la fenêtre
 2) Qu'arrive-t-il si vous ajoutez des retours de lignes "\n" dans la phrase du Label?
 3) Ajouter une fonction qui retournera une citation prise au hasard dans le fichier citations.txt
-   1) Les exemples de lectures de fichiers sont dans le dépôt 
+   1) Les exemples de lectures de fichiers sont dans le dépôt PythonExercices
    4) Utiliser cette fonction pour créer le Label
    5) Ajouter une logique qui permettra d'ajouter les "\n" à chaque 3 mots et avant l'auteur.
 
