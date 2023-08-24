@@ -19,11 +19,12 @@ Exercices
       2) créer un QLabel qui affiche "Cliquez pour une équation"
       3) Ajouter le label et le bouton précédent à un QVBoxLayout comme ceci:
       
-   main_layout = QVBoxLayout()
-   main_layout.addWidget(<variable du label>)
-   main_layout.addWidget(<variable du bouton>)
-
-   main_container = QWidget()
-   main_container.setLayout(main_layout)
-
-   self.setCentralWidget(main_container)
+      main_layout = QVBoxLayout()
+      main_layout.addWidget(<variable du label>)
+      main_layout.addWidget(<variable du bouton>)
+   
+      main_container = QWidget()
+      main_container.setLayout(main_layout)
+   
+      self.setCentralWidget(main_container)
+   3) Ajouter la logique dans la méthode pour afficher une équation au hasard
