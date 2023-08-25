@@ -14,7 +14,7 @@ Exercices
 # PySide
 1) À partir de l'exemple des notes de cours, recréer une fenêtre
    1) contenant simplement un bouton qui fermera la fenêtre
-   2) changer la méthode connecter pour ajouter une nouvelle méthode "handle_button_ok"
+   2) changer la méthode connectée pour ajouter une nouvelle méthode "handle_button_ok"
       1) dans la méthode, faire un output "click!" vers la console
       2) créer un QLabel qui affiche "Cliquez pour une équation"
       3) Ajouter le label et le bouton précédent à un QVBoxLayout comme ceci:
@@ -27,9 +27,9 @@ Exercices
       main_container.setLayout(main_layout)
    
       >self.setCentralWidget(main_container)
-   3) Ajouter la logique dans la méthode pour afficher une équation au hasard
+   3) Ajouter la logique dans la méthode pour afficher une équation au hasard au lieu de fermer la fenêtre
 
-Documenstation officielle PySide6: https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/
+Documentation officielle PySide6: https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/
 
 
 
