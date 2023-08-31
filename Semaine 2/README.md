@@ -1,4 +1,5 @@
-1) Créer une application PySide6
+# Bases des éléments d'une fenêtre
+2) Créer une application PySide6
    1) Qui affiche un titre "Mon application"
    2) Qui contient une barre de statut
    3) Qui contient deux menus "&Menu1" et "M&enu2" avec chacun leur QAction 
@@ -13,4 +14,26 @@
       1) un QPushButton
          1) Qui ouvrira un QDialog
             1) Contiendra un layout avec un QPushButton qui fermera le QDialog
-   
+
+# Lecteur de GIFs 
+
+Un GIF (Graphic Interchange Format) est une image bitmap qui est animée. En regardant la documentation de
+[QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#qlabel), l'on peut voir que le contenu supporté 
+inclus [QMovie](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QMovie.html#qmovie).
+
+Les [QAction](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QAction.html#qaction) peuvent être affichées sous formes
+d'icônes en utilisant un [QIcon](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QIcon.html#qicon) 
+
+1) Créer une application PySide6
+   1) La fenêtre principale aura comme titre "Lecteur de GIFs"
+   2) Créer une QAction action_jouer
+      1) ayant l'icône "jouer.png"
+      2) connectée à une méthode jouer(self) qui activera le GIF
+   3) Créer une QAction action_stop
+      1) ayant l'icône "stop.png"
+      2) connectée à une méthode stop(self) qui arrêtera l'animation du GIF
+   4) Ajouter un QLabel à la fenêtre (idéalement dans un QVBoxLayout)
+   5) Initialiser un QMovie avec le GIF "sup.gif"
+      1) L'assigner au QLabel
+      2) L'activer par défaut
+   6) Ajouter un menu contenant les deux actions
