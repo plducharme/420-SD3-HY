@@ -37,3 +37,4 @@ d'icônes en utilisant un [QIcon](https://doc.qt.io/qtforpython-6/PySide6/QtGui/
       1) L'assigner au QLabel
       2) L'activer par défaut
    6) Ajouter un menu contenant les deux actions
+   7) Ajouter barre d'outils avec les deux actions
