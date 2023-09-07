@@ -17,5 +17,6 @@
    7) un bouton qui va désactiver/activer tous les autres boutons
    8) connecter une méthode pressed et release d'un bouton et ajouter un output à la console, regarder ce qui arrive lorsque vous cliquez sans relâcher et lorsque vous relâchez
    9) ajouter un bouton qui va afficher un QDialog avec le texte sélectionné dans le QLabel. Si aucun texte est sélectionné, afficher "Sélectionner du texte de la citation"
+      1) Pour faire fonctionner ceci, ajouter un raccourci clavier et utiliser le raccourci clavier après avoir sélectionné
 
 
