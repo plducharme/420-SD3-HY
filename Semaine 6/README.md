@@ -32,7 +32,34 @@ RochePapierCiseaux(QMainWindow)
 <a href="https://www.flaticon.com/free-icons/origami" title="origami icons">Origami icons created by Smashicons - Flaticon</a>  
 <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons">Scissors icons created by Gulraiz - Flaticon</a>
 
-## Compléments à venir
+# Un autre classique - TicTacToe
+1) Créer l'interface pour un jeu de TicTacToe de base à deux joueurs
+![tictactoe](tictactoe.png "Tic Tac Toe") 
+2) Utiliser un QGridLayout pour l'aire de jeu
+3) Chaque case comprendra un QPushButton
+   1) Vous pouvez faire 9 méthodes pour connecter les boutons ou vous pouzez en faire une seule et obtenir le nom du widget appelant:  
+   >def bouton_clicked(self):  
+   >  widget_origine = self.sender()  
+   >  nom_widget = widget_origine.objectName()
+4) Chaque widget dans une case aura une grandeur de 50x50 (i.e. QSize(50, 50))
+5) Lorsque cliqué, un bouton sera remplacé par un QLabel qui affichera le pion du joueur courant ("X" ou "O")
+   1) Optionel: Remplacer le texte du QLabel par des icônes de votre choix
+6) Créer une classe JeuTicTacToe() qui représente le modèle du jeu
+   1) Devra initialiser deux joueurs
+   2) Devra contenir une structure de données pour représenter le plateau de jeu, ex:
+   >self.plateau = [  
+   >         [" ", " ", " "],  
+   >         [" ", " ", " "],  
+   >         [" ", " ", " "]  
+   >  ]
+   3) *Petit truc*: Initialiser la classe de jeu dans le constructeur de la Fenêtre Principale et passer une référence de la fenêtre principale (vue) au constructeur de la classe de Jeu pour avoir une référence à la vue.
+   4) Implémenter la logique qui alterne chaque joueur à jouer
+   5) Implémenter une méthode qui vérifie s'il y a un gagnant
+      1) En cas de gagnant, afficher un QDialog qui affichera le nom du gagnant
+7) Créer une classe Joueur() pour représenter les joueurs
+   1) Devra contenir un nom: str et un pion: str
+8) Si vous pouvez, ajouter la logique qui reset le Jeu mais garde le score entre les deux joueurs (ajouter les éléments de UI pour afficher le score.)
+
 
 
 
