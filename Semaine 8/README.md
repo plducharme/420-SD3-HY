@@ -15,7 +15,7 @@
 2) Pour animer le chat, utiliser un QTimer. Le QTimer permet d'appeler une méthode à chaque X millisecondes
 >timer = QTimer()  
 >timer.timeout.connect(la_methode_a_appele)  
->timer.start() 
+>timer.start(500) #Nb be millisecndes entre chaque appel 
 3) Ajouter un mouvement de gauche vers la droite au chat en plus de l'animation des images
 
 ## Créer une application pour couper l'image originale en images de chaque "frame"
