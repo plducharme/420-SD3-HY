@@ -13,7 +13,7 @@
 ## Créer une application qui animera l'image de chat
 1) Utiliser le QPainter pour dessiner le chat dans le répertoire image
 2) Pour animer le chat, utiliser un QTimer. Le QTimer permet d'appeler une méthode à chaque X millisecondes
->timer = QTimer()  
+>timer = QTimer(self)  
 >timer.timeout.connect(la_methode_a_appele)  
 >timer.start(500) #Nb be millisecndes entre chaque appel 
 3) Ajouter un mouvement de gauche vers la droite au chat en plus de l'animation des images
