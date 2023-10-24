@@ -143,9 +143,13 @@ class Joueur:
         if direction == Direction.HAUT:
             if self.y - JeuPong.BLOCK_SIZE > 0:
                 self.y -= JeuPong.BLOCK_SIZE
+            else:
+                self.y = 0
         elif direction == Direction.BAS:
             if self.y + Joueur.GRANDEUR_PALETTE + JeuPong.BLOCK_SIZE < hauteur:
                 self.y += JeuPong.BLOCK_SIZE
+            else:
+                self.y = hauteur - Joueur.GRANDEUR_PALETTE
 
     def dessiner(self, vue: Pong):
         canevas = vue.canevas
