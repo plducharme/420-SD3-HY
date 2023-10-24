@@ -194,7 +194,7 @@ class Balle:
         elif y2 >= JeuPong.HAUTEUR:
             self.vitesse_y = self.vitesse_y * -1
         self.y = y2
-
+        # Collision à corriger: En ce moment la balle pourrait passer "à travers" la palette si elle va trop vite
         for joueur in jeu.joueurs:
             if x2 in range(joueur.x, joueur.x + Joueur.LARGEUR_PALETTE + 1) and y2 in range(joueur.y, joueur.y + joueur.GRANDEUR_PALETTE + 1):
                 self.vitesse_x = self.vitesse_x * -1
