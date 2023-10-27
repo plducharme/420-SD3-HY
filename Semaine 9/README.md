@@ -9,6 +9,14 @@
    4) windowsPos()
    5) Étudier la différence entre chaque position et se ce chaque position représente
 
+## keyPressEvent
+1) Créer une application qui permet de contrôler un objet qui se dessinera sur le canevas
+2) Utiliser les touches suivantes (voir Exemples/serpents.py)
+   1) W = accélérer
+   2) S = ralentir
+   3) A = rotation vers la gauche
+   4) D = rotation vers la droite
+3) L'objet devrait être représenté par sa propre classe
 
 
 
