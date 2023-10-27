@@ -18,5 +18,29 @@
    4) D = rotation vers la droite
 3) L'objet devrait être représenté par sa propre classe
 
+## Widget et signal personnalisés
+### QBatterie(Qwidget)
+1) Créer une application qui va afficher un widget personnalisé sous la forme d'une batterie
+2) Le widget aura comme propriétés: minValeur, valeur et maxValeur
+   1) Ajouter les getters/setters
+3) La méthode paintEvent() peut être redéfinie (override) pour peinturer le widget
+	
+```
+def paintEvent(self, event)
+  painter = QPainter(self)
+  ...
+```
+   - Le widget aura un rectangle de couleur pour le fond
+   - Basé sur la valeur actuelle (par rapport au min et max), jusqu'à 5 barre de courant seront dessinés
+4) La méthode sizeHint() peut être redéfini pour suggérer la grandeur par défaut
+5) Ajouter le code suivant au constructeur pour minimizer l'expansion du widget
+```
+self.setSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding,
+            QtWidgets.QSizePolicy.MinimumExpanding
+        )
+```
+6) Ajouter un signal personnalisé valeurChanged qui sera déclenché dans le setValue()
+7) Embellissez le tout une fois que cela fonctionne
 
 
