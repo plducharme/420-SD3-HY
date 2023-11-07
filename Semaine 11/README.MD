@@ -9,9 +9,11 @@
    1) Le serveur accepte seulement les connexions des adresses ip listées
 5) Sous "Deployment->Database", cliquer "Browse Collections"  
 ![Browse Collection](./browse.png)
-6) "Create database", créer une base de donnée "GestionMusique"
-7) Créer une collection "Albums"
-8Regarder le code d'exemple pour se connecter avec pymongo
+6) Sous "Deployment->Database", cliquer "connect" et choisir Python, vous aller pouvoir copier la chaîne de connexion (connexion string)
+  1) Il vous restera seulement à remplacer le mot de passe dans la chaîne
+7) "Create database", créer une base de donnée "GestionMusique"
+8) Créer une collection "Albums"
+9) Regarder le code d'exemple pour se connecter avec pymongo
 
 ## Créer une application Pyside6 permettant de gérer des albums de musique
 1) Créer une application qui va gérer une collection d'albums de musique
