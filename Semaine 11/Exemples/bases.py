@@ -87,7 +87,7 @@ class MongoTestClient:
 
     def supprimer_un(self, query_object: dict):
         self.collection.delete_one(query_object)
-        self.append_texte("Suppresion d'un document")
+        self.append_texte("Suppression d'un document")
 
     def supprimer_plusieurs(self):
         # on peut specifier un filtre, voir supprimer_un. Si on ne met aucun filtre, tous les documents seront supprimes
