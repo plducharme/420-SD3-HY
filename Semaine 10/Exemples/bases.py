@@ -22,26 +22,26 @@ class BasesSQL(QMainWindow):
 
         jeux_db = JeuxBD()
         # Exécute toutes les requêtes
-        jeux_db.creerTable()
+        jeux_db.creer_table()
 
         self.textarea.setText(self.textarea.toPlainText() + "\nInsertion\n")
-        jeux_db.insererJeux(liste_jeux)
+        jeux_db.inserer_jeux(liste_jeux)
 
         self.textarea.setText(self.textarea.toPlainText() + "\nSélection de Fornite\n")
-        jeu = jeux_db.selectJeuParNom("Fornite")
+        jeu = jeux_db.select_jeu_par_nom("Fornite")
         self.textarea.setText(str(jeu))
 
         self.textarea.setText(self.textarea.toPlainText() + "\nSuppression de Fornite\n")
-        jeux_db.supprimerEnregistrement("Fornite")
+        jeux_db.supprimer_enregistrement("Fornite")
 
         self.textarea.setText(self.textarea.toPlainText() + "\nSélection de tous les enregistrement restants\n")
-        jeux = jeux_db.selectTous()
+        jeux = jeux_db.select_tous()
         text = ""
         for j in jeux:
             text += str(j) + "\n"
         self.textarea.setText(self.textarea.toPlainText() + "\n" + text)
         self.textarea.setText(self.textarea.toPlainText() + "\nSuppression de la table\n")
-        jeux_db.supprimerTable()
+        jeux_db.supprimer_table()
 
 
 # Classe représentant un jeu
@@ -52,7 +52,7 @@ class Jeu:
         self.annee = annee
 
     def __str__(self):
-        return "{\nnom:\n" + self.nom + "\nstudio:\n" + self.studio + "\nannée:\n" + self.annee + "\n}"
+        return "{\nnom:\n" + self.nom + "\nstudio:\n" + self.studio + "\nannée:\n" + str(self.annee) + "\n}"
 
 
 # Classe qui manipule la BD
@@ -62,18 +62,18 @@ class JeuxBD:
         # Ouvre une connection sur une BD contenue dans un fichier jeux.db ou la créée si inexistante
         self.con = sqlite3.connect("jeux.db")
 
-    def creerTable(self):
+    def creer_table(self):
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         # Créer une table Jeu
         curseur.execute("CREATE TABLE Jeu(nom, studio, annee)")
 
-    def supprimerTable(self):
+    def supprimer_table(self):
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         curseur.execute("DROP TABLE Jeu")
 
-    def insererJeux(self, liste_jeux: list[Jeu]):
+    def inserer_jeux(self, liste_jeux: list[Jeu]):
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         # On génère les valeurs sous forme ('nom', 'studio', 'annee')
@@ -90,14 +90,14 @@ class JeuxBD:
         # "commit" pour signifier la fin de la transaction et appliquer les changements
         self.con.commit()
 
-    def supprimerEnregistrement(self, nom):
+    def supprimer_enregistrement(self, nom):
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         requete = "DELETE FROM jeu WHERE nom = '" + nom + "'"
         curseur.execute(requete)
         self.con.commit()
 
-    def selectJeuParNom(self, nom) -> Jeu:
+    def select_jeu_par_nom(self, nom) -> Jeu:
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         # Sélectionne toutes les colonnes, il est possible de sélectionner seulement certaines colonnes
@@ -107,7 +107,7 @@ class JeuxBD:
         resultat = curseur.fetchone()
         return Jeu(resultat[0], resultat[1], resultat[2])
 
-    def selectTous(self):
+    def select_tous(self):
         # Créer un curseur pour exécuter une requête
         curseur = self.con.cursor()
         # Sélectionne toutes les colonnes
