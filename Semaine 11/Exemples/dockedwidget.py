@@ -14,6 +14,10 @@ class DockedExemple(QMainWindow):
         # Créer une fenêtre de type QDockWidget
         self.fenetre1 = QDockWidget()
         self.fenetre1.setWindowTitle("fenêtre 1")
+        # On assigne les fonctionnalités permises du QDockWidget (dans ce cas-ci, on a pas mis la possibilité de fermer
+        # la fenêtre
+        self.fenetre1.setFeatures(QDockWidget.DockWidgetFeature.DockWidgetMovable |
+                                  QDockWidget.DockWidgetFeature.DockWidgetFloatable)
         # ajouter la fenêtre dans la position de gauche par défaut
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.fenetre1)
 
