@@ -51,9 +51,9 @@ class QMessageBoxEx(QMainWindow):
             print("Réponse Question: Non")
 
     def bouton_personnalise_clicked(self):
-        message_box = QMessageBox()
+        message_box = QMessageBox(self)
         message_box.setText("QMessageBox personnalisé avec un choix de boutons pour la sauvegarde")
-        message_box.setInformativeText("Voulez vous enregistrer les modifications")
+        message_box.setInformativeText("Voulez vous enregistrer les modifications?")
         message_box.setStandardButtons(QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Discard |
                                        QMessageBox.StandardButton.Cancel)
         message_box.setDefaultButton(QMessageBox.StandardButton.Save)
@@ -74,7 +74,7 @@ class QMessageBoxEx(QMainWindow):
         # Charge le fichier provenant de Pyside6 contenant les traductions
         # Contenu dan Pyside6/translations/qt_<code de langue>.qm
         traducteur.load("qt_fr", QLibraryInfo.path(QLibraryInfo.TranslationsPath))
-        # On va chercher l'instance de l'applicaiotn en cours pour installer e traducteur
+        # On va chercher l'instance de l'application en cours pour installer le traducteur
         QApplication.instance().installTranslator(traducteur)
 
 
