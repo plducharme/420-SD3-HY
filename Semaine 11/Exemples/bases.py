@@ -73,7 +73,6 @@ class MongoTestClient:
         resultats = self.collection.insert_many(documents)
         self.append_texte("insert_many:" + str(resultats.inserted_ids))
 
-
     def find(self, query_object: dict, tri: str):
         documents = self.collection.find(query_object)
         if tri != "":

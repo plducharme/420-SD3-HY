@@ -73,7 +73,7 @@ class QMessageBoxEx(QMainWindow):
         traducteur = QTranslator(self)
         # Charge le fichier provenant de Pyside6 contenant les traductions
         # Contenu dan Pyside6/translations/qt_<code de langue>.qm
-        traducteur.load("qt_fr", QLibraryInfo.path(QLibraryInfo.TranslationsPath))
+        traducteur.load("qt_fr.qm", QLibraryInfo.path(QLibraryInfo.TranslationsPath))
         # On va chercher l'instance de l'application en cours pour installer le traducteur
         QApplication.instance().installTranslator(traducteur)
 
