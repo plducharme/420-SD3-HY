@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGridLayout, QCheckBox, QButtonGroup
 import logging
 
+
 # Exemple de loggers. On configure un logger à un certain niveau (limite). Tous les messages que l'on log à un niveau
 # supérieur à la limite auront un "output" dans la destination configurée (par défaut la console)
 # DEBUG < INFO < WARNING < ERROR < CRITICAL
@@ -83,7 +84,6 @@ class DemoLogger(QMainWindow):
                 logging.getLogger().setLevel(logging.ERROR)
             case "CRITICAL":
                 logging.getLogger().setLevel(logging.CRITICAL)
-
 
 
 app = QApplication()
